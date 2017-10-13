@@ -1,0 +1,123 @@
+使用pygame 制作游戏 Cannon
+
+1、遇到问题
+最初对pygame一点也不知道，开始在网上搜寻相关资料
+
+2、解决方法
+参考著名新手入门教程：使用pygame编写飞机大战
+
+3、又遇到问题
+其实还是不会
+from pygame.locals import *这一句话我分别使用spyder2.6以及spyder3.7均无法编译
+同时K_UP和K_down也报错
+
+4、终极解决办法
+四处寻访高手，终于在学长指点下完成任务
+同时3中无法运行的语句，学长告诉我在命令框中直接运行无报错
+
+5、代码
+···
+import pygame
+import math
+from pygame.colordict import THECOLORS
+from pygame.locals import *
+
+SCREEN_MERCIES = (720, 640)
+
+if __name__ == "__main__":
+    pygame.init()
+
+    screen = pygame.display.set_mode(SCREEN_MERCIES)
+
+    x = 0
+    y = 640
+    speed = 5
+    theta = 45
+
+    throwed = False
+    bomped = False
+
+    bomp_radius = 3
+
+    clock = pygame.time.Clock()
+    while True:
+        clock.tick(60)
+        pygame.display.update()
+        screen.fill(THECOLORS["black"])
+
+        #draw human
+        pygame.draw.rect(screen, THECOLORS["green"], pygame.Rect(0, 610, 10, 30))
+
+        if bomped :
+            pygame.draw.circle(screen, THECOLORS["blue"], (int(x), int(y)), int(bomp_radius))
+            bomp_radius += 60 / (bomp_radius)
+
+        if throwed:
+            # noinspection PyUnboundLocalVariable
+            y_speed -= 0.05
+            # noinspection PyUnboundLocalVariable
+            x_speed += 0
+
+            x += x_speed
+            y -= y_speed
+
+            if y> 640:
+                throwed = False
+                bomped = True
+
+            pygame.draw.circle(screen, THECOLORS["red"], (int(x), int(y)), 10)
+        else:
+            if not bomped:
+                dy = speed * math.sin(theta / 180 * math.pi) * 10
+                dx = speed * math.cos(theta / 180 * math.pi) * 10
+                pygame.draw.line(screen, THECOLORS["white"],(0,640),(dx, 640 - dy))
+        # canon location
+
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                pygame.quit()
+                exit(0)
+            elif event.type == pygame.KEYDOWN:
+                keys_status = pygame.key.get_pressed()
+                if keys_status[K_SPACE]:
+                    if not bomped:
+                        throwed = True
+                        y_speed = speed * math.sin(theta / 180 * math.pi)
+                        x_speed = speed * math.cos(theta / 180 * math.pi)
+                if keys_status[K_UP]:
+                    theta += 1
+                    if theta > 90:
+                        theta = 90
+                if keys_status[K_DOWN]:
+                    theta -= 1
+                    if theta < 0:
+                        theta = 0
+                if keys_status[K_RIGHT]:
+                    speed += 0.1
+                    if speed > 100:
+                        speed = 100
+                if keys_status[K_LEFT]:
+                    speed -= 0.1
+                    if speed < 0:
+                        speed = 0
+
+                if keys_status[K_r]:
+                    x = 0
+                    y = 640
+                    throwed  = False
+                    bomped = False
+                    bomp_radius = 3
+···
+
+6、简述历程
+使用K_UP与K_DOWN调节角度
+使用K_RIGHT和K_LEFT调节水平速度
+使用K_r回到初始
+
+7、特别谢明
+万分感谢王学长的指点
+以及
+- [x]  [pygame教程](http://blog.csdn.net/thystar/article/details/45249609)   pygame教程
+- [x]  [子弹打飞机](http://www.cnblogs.com/secondtonone1/p/7250490.html）  子弹打飞机
+- [x]  [游戏编程之旅](http://python.jobbole.com/85795/?utm_source=blog.jobbole.com&utm_medium=relatedPosts)
+
