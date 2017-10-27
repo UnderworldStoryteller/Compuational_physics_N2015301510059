@@ -6,4 +6,4 @@ Compuational_physics_N2015301510059
 - [x]  [Exercise_05 problem 2.10:](http://note.youdao.com/noteshare?id=9089ca9ca185082d0a385c6381bb2aeb)
 - [x]  [extral problem:pygame](http://note.youdao.com/noteshare?id=fa5f6ef4d42d6cdfb077dec2fbb05404)
 - [x]  [Exercise_06 problem 2.19:](http://note.youdao.com/noteshare?id=97289564bbaba251f22713065623560c)
-- [x]  [Exercise_06 problem 3.13:](http://note.youdao.com/noteshare?id=5ae553895efefcdcb6ba1cebe1741b8f)
+- [x]  [Exercise_07 problem 3.13:](http://note.youdao.com/noteshare?id=5ae553895efefcdcb6ba1cebe1741b8f)
