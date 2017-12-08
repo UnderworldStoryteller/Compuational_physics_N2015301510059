@@ -11,3 +11,4 @@ Compuational_physics_N2015301510059
 - [x]  [Exercise_09 problem 3.31:](http://note.youdao.com/noteshare?id=0d19de1c92e281ebfc549d7b7db5aa6f)
 - [x]  [期中作业：pygame升级版:](http://note.youdao.com/noteshare?id=9ab589abad04eccd77250afeb30b666a)
 - [x]  [Exercise_10 problem 4.16:](http://note.youdao.com/noteshare?id=b86c3d832552ebc987efa13418abe1a8)
+- [x]  [Exercise_11 problem 5.3:](http://note.youdao.com/noteshare?id=07492c2f8fc5f9bfa6afd35b6d643509)
