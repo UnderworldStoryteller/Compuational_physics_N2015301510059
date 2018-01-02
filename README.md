@@ -13,3 +13,4 @@ Compuational_physics_N2015301510059
 - [x]  [Exercise_10 problem 4.16:](http://note.youdao.com/noteshare?id=b86c3d832552ebc987efa13418abe1a8)
 - [x]  [Exercise_11 problem 5.3:](http://note.youdao.com/noteshare?id=07492c2f8fc5f9bfa6afd35b6d643509)
 - [x]  [Exercise_12 problem 6.6:](http://note.youdao.com/noteshare?id=1d48385d2031e316ea26d138b28b2edc)
+- [x]  [期末报告](https://github.com/UnderworldStoryteller/Compuational_physics_N2015301510059/blob/master/%E8%AE%A1%E7%AE%97%E7%89%A9%E7%90%86%E6%9C%9F%E6%9C%AB%E6%8A%A5%E5%91%8A.pdf)
